@@ -7,7 +7,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.navigation.NavController
+import com.ramcosta.composedestinations.annotation.DeepLink
 import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.annotation.FULL_ROUTE_PLACEHOLDER
 import com.ramcosta.composedestinations.annotation.NavGraph
 import com.ramcosta.composedestinations.annotation.RootNavGraph
 import com.ramcosta.composedestinations.navigation.navigate
@@ -46,7 +48,13 @@ fun ArgumentsScreen(navController: NavController) {
 }
 
 @ArgumentsNavGraph
-@Destination
+@Destination(
+    deepLinks = [
+        DeepLink(
+            uriPattern = "https://codestinations.applifting.cz/$FULL_ROUTE_PLACEHOLDER"
+        )
+    ]
+)
 @Composable
 fun ArgumentsSubScreen(
     number: Int,
