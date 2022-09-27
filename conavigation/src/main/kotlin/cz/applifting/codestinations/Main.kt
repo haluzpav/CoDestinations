@@ -17,5 +17,6 @@ fun Main() {
         }
         basicNavigation(navController)
         argumentsNavigation(navController)
+        backNavigation(navController)
     }
 }
