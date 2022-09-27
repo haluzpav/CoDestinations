@@ -5,6 +5,7 @@ import androidx.navigation.NavController
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.annotation.RootNavGraph
 import com.ramcosta.composedestinations.navigation.navigate
+import cz.applifting.codestinations.destinations.ArgumentsScreenDestination
 import cz.applifting.codestinations.destinations.BasicScreenDestination
 
 @RootNavGraph(start = true)
@@ -15,6 +16,7 @@ fun CrossroadScreen(
 ) {
     Crossroad(
         title = "Compose Destinations",
-        navigateToBasic = { navController.navigate(BasicScreenDestination) }
+        navigateToBasic = { navController.navigate(BasicScreenDestination) },
+        navigateToArgs = { navController.navigate(ArgumentsScreenDestination) },
     )
 }
