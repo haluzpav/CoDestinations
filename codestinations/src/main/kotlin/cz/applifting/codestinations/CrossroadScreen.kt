@@ -27,7 +27,7 @@ fun CrossroadScreen(
     val deepLinkIntent = remember {
         Intent(
             Intent.ACTION_VIEW,
-            "https://codestinations.applifting.cz/arguments_sub_screen/42?text=This is deeplink, baby!".toUri(),
+            "https://codestinations.applifting.cz/arguments_sub_screen/42?text=This is deeplink, baby! 😎".toUri(),
             context,
             MainActivity::class.java
         )

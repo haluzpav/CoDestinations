@@ -11,6 +11,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import androidx.navigation.navDeepLink
 import androidx.navigation.navigation
 
 fun NavGraphBuilder.argumentsNavigation(navController: NavController) {
@@ -33,6 +34,11 @@ fun NavGraphBuilder.argumentsNavigation(navController: NavController) {
                     type = NavType.StringType
                     nullable = true
                 }
+            ),
+            deepLinks = listOf(
+                navDeepLink {
+                    uriPattern = "https://codestinations.applifting.cz/arguments_sub_screen/{number}?text={text}"
+                },
             ),
         ) {
             val number = it.arguments?.getInt("number") as Int
