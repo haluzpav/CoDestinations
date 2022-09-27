@@ -13,7 +13,8 @@ fun Main() {
         startDestination = "crossroad"
     ) {
         composable("crossroad") {
-            CrossroadScreen(navController = navController)
+            CrossroadScreen(navController)
         }
+        basicNavigation(navController)
     }
 }

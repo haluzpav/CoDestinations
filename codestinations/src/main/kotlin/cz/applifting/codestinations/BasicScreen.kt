@@ -33,5 +33,5 @@ fun BasicScreen(navController: NavController) {
 @Destination
 @Composable
 fun BasicSubScreen() {
-    Text("Basic sub-screen 1")
+    Text("Basic sub-screen")
 }
