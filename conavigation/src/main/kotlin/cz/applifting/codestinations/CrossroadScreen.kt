@@ -10,5 +10,6 @@ fun CrossroadScreen(
     Crossroad(
         title = "Compose Navigation",
         navigateToBasic = { navController.navigate("basic") },
+        navigateToArgs = { navController.navigate("arguments") },
     )
 }

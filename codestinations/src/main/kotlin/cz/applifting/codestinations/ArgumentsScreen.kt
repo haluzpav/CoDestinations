@@ -12,7 +12,6 @@ import com.ramcosta.composedestinations.annotation.NavGraph
 import com.ramcosta.composedestinations.annotation.RootNavGraph
 import com.ramcosta.composedestinations.navigation.navigate
 import cz.applifting.codestinations.destinations.ArgumentsSubScreenDestination
-import java.io.Serializable
 
 @RootNavGraph
 @NavGraph
@@ -34,7 +33,8 @@ fun ArgumentsScreen(navController: NavController) {
             onClick = {
                 val destination = ArgumentsSubScreenDestination(
                     number = argumentNumber.value,
-                    someData = SomeData("Pavel Havel", 123L),
+                    someData = null,
+                    // someData = SomeData("Pavel Havel", 123L),
                     // text = "My own Hello 😘",
                 )
                 navController.navigate(destination)
@@ -50,7 +50,7 @@ fun ArgumentsScreen(navController: NavController) {
 @Composable
 fun ArgumentsSubScreen(
     number: Int,
-    someData: SomeData,
+    someData: SomeData?,
     text: String = "Hello 🙃",
 ) {
     Column {
@@ -60,8 +60,3 @@ fun ArgumentsSubScreen(
         Text("someData: $someData")
     }
 }
-
-data class SomeData(
-    val name: String,
-    val phone: Long,
-) : Serializable

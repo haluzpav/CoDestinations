@@ -16,5 +16,6 @@ fun Main() {
             CrossroadScreen(navController)
         }
         basicNavigation(navController)
+        argumentsNavigation(navController)
     }
 }
